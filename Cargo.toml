@@ -1,0 +1,44 @@
+[package]
+name = "liba2"
+version = "0.1.0"
+edition = "2024"
+license = "GPL-2.0"
+repository = "https://github.com/surinrasu/liba2"
+description = "AirPlay 2 discovery, pairing, RTSP, timing, audio, and client stack"
+
+[dependencies]
+tokio = { version = "1.52.3", default-features = false, features = [
+    "io-util",
+    "macros",
+    "net",
+    "rt",
+    "sync",
+    "time",
+] }
+futures-core = "0.3.32"
+async-trait = "0.1.89"
+async-stream = "0.3.6"
+mdns-sd = "0.11.5"
+x25519-dalek = { version = "2.0.1", default-features = false, features = ["static_secrets", "zeroize"] }
+ed25519-dalek = { version = "2.2.0", default-features = false, features = ["alloc", "zeroize"] }
+curve25519-dalek = { version = "4.1.3", default-features = false }
+chacha20poly1305 = { version = "0.10.1", default-features = false, features = ["alloc"] }
+sha2 = "0.10.9"
+hkdf = "0.12.4"
+num-bigint = "0.4.6"
+plist = "1.9.0"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_bytes = "0.11.19"
+uuid = { version = "1.23.1", default-features = false, features = ["v4"] }
+alac-encoder = "0.3.0"
+thiserror = "2.0.18"
+tracing = "0.1.44"
+zeroize = { version = "1.8.2", features = ["derive"] }
+subtle = "2.6.1"
+serde_json = "1.0.150"
+crossbeam-channel = "0.5.15"
+libc = "0.2.186"
+spin_sleep = "1.3.3"
+rubato = "0.15.0"
+fastrand = "2.4.1"
+getrandom = "0.4.2"
